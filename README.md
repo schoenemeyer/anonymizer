@@ -1,4 +1,4 @@
-# understand.ai Anonymizer - using NVIDIA GPUS and NVIDIA NGC Tensorflow container
+# Anonymizer - using NVIDIA GPUS and NVIDIA NGC Tensorflow container
 
 This is an fork from understand-ai. It works similar with 2 small changes. To get the best performance on NVIDIA GPUs, we are using an NGC Tensorflow container.
 
