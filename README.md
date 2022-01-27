@@ -1,16 +1,9 @@
-# understand.ai Anonymizer
+# understand.ai Anonymizer - using NVIDIA GPUS and NVIDIA NGC Tensorflow container
 
-To improve privacy and make it easier for companies to comply with GDPR, we at [understand.ai](https://understand.ai/) 
-decided to open-sourcing our anonymization software and weights for a model trained on our in-house datasets 
-for faces and license plates.  
+This is an fork from understand-ai. It works similar with 2 small changes. To get the best performance on NVIDIA GPUs, we are using an NGC Tensorflow container.
+
 To make it easy for everyone to use these weights in their own projects the model is trained with 
 [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection).
-
-Our anonymizer is used for projects with some of Germany's largest car manufacturers and suppliers,
-but we are sure there are many more applications.  
-We are looking forward to a widespread use and would love to hear your feedback.  
-Feel free to contact us with any questions at anonymizer@understand.ai.
-
 
 ## Disclaimer
 
@@ -18,7 +11,7 @@ Note that the version here is not identical to the anonymizer we use with our cu
 but the glue-code is written for easy-of-use instead of speed.  
 For this reason no multiprocessing code or batched detection and blurring are used in this repository.
 
-This version of our anonymizer is trained to detect faces and license plates in images recorded with sensors that are
+This version of the anonymizer is trained to detect faces and license plates in images recorded with sensors that are
 typically used in autonomous vehicles. It will not work on low-quality or grayscale images and will also not work on 
 fish-eye or other extreme camera  configuration.
 If there is high demand for models specialised for certain camera configurations, we might decide to open-source our 
@@ -40,12 +33,23 @@ To install the anonymizer just clone this repository, create a new python3.6 env
 The sequence of commands to do all this is
 
 ```bash
-python -m venv ~/.virtualenvs/anonymizer
-source ~/.virtualenvs/anonymizer/bin/activate
-
 git clone https://github.com/understand-ai/anonymizer
 cd anonymizer
+```
+## Modify requirements.txt
 
+```bash
+cat requirements.txt
+pytest
+flake8
+numpy
+Pillow
+requests
+googledrivedownloader
+tqdm
+
+pip install -r requirements.txt
+```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
