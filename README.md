@@ -29,10 +29,19 @@ more specialised models as well.
 
 ## Installation
 
-To install the anonymizer just clone this repository, pull the nvcr.io/nvidia/tensorflow:20.11-tf1-py3 . This comes with the necessary python3.6 environment. One can see the full details of this release https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_20-11.html#rel_20-11 
+To install the anonymizer just clone this repository, pull the
+
+```bash
+docker pull nvcr.io/nvidia/tensorflow:20.11-tf1-py3 
+```
+
+This container comes with the necessary python3.6 environment. One can see the full details of this release https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_20-11.html#rel_20-11 
+
+We assume, the docker engine with the NVIDIA runtime on your GPU system is already installed.
 The sequence of commands to do all this is
 
 ```bash
+docker run -it --gpus all  --rm -v `pwd`:`pwd` -w `pwd`  nvcr.io/nvidia/tensorflow:20.11-tf1-py3
 git clone https://github.com/understand-ai/anonymizer
 cd anonymizer
 ```
