@@ -67,9 +67,6 @@ Some test cases download model weights and some perform inference to make sure e
 
 ## Usage
 
-In case you want to run the model on CPU, make sure that you install `tensorflow` instead of `tensorflow-gpu` listed
-in the `requirements.txt`.
-
 Since the weights will be downloaded automatically all that is needed to anonymize images is to run
 
 ```bash
