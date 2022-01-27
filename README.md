@@ -61,7 +61,7 @@ To make sure everything is working as intended run the test suite with the follo
 pytest
 ```
 
-Running the test cases can take several minutes and is dependent on your GPU (or CPU) and internet speed.  
+Running the test cases can take several minutes and is dependent on your GPU and internet speed.  
 Some test cases download model weights and some perform inference to make sure everything works as intended.
 
 
