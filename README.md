@@ -37,7 +37,9 @@ docker pull nvcr.io/nvidia/tensorflow:20.11-tf1-py3
 
 This container comes with the necessary python3.6 environment. One can see the full details of this release https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_20-11.html#rel_20-11 
 
-We assume, the docker engine with the NVIDIA runtime on your GPU system is already installed.
+We assume, the docker engine with the NVIDIA runtime on your GPU system is already installed. If not please visit our guide how to install
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
+
 The sequence of commands to do all this is
 
 ```bash
