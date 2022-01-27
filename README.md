@@ -50,6 +50,9 @@ tqdm
 
 pip install -r requirements.txt
 ```
+
+```bash
+docker run -it --gpus all  --rm -v `pwd`:`pwd` -w `pwd`  nvcr.io/nvidia/tensorflow:20.11-tf1-py3
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
