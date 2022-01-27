@@ -47,8 +47,6 @@ Pillow
 requests
 googledrivedownloader
 tqdm
-
-pip install -r requirements.txt
 ```
 
 ```bash
