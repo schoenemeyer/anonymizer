@@ -44,10 +44,10 @@ The sequence of commands to do all this is
 
 ```bash
 docker run -it --gpus all  --rm -v `pwd`:`pwd` -w `pwd`  nvcr.io/nvidia/tensorflow:20.11-tf1-py3
-git clone https://github.com/understand-ai/anonymizer
+git clone https://github.com/schoenemeyer/anonymizer
 cd anonymizer
 ```
-## Modify requirements.txt
+## These are the modifications from the master version in understand-ai , a) requirements.txt and b) docker run
 
 ```bash
 cat requirements.txt
